@@ -1,0 +1,216 @@
+@media screen and (max-width: 1200px) {
+    // ========================================================================= service-2
+    .service-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-block__img {
+        max-width: 570px;
+        margin: 0 0 60px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// ================
+// ================ 992 ================
+// ================
+@media screen and (max-width: 992px) {
+    .header-nav {
+        display: none;
+    }
+
+    .banner {
+        height: 900px;
+        padding-top: 200px;
+    }
+
+    .slogan__inner-h1 {
+        margin-bottom: 20px;
+
+        font-size: 50px;
+    }
+
+    .slogan__inner-text {
+        font-size: 100px;
+        line-height: 90px;
+    }
+}
+
+// ================
+// ================ 768 ================
+// ================
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 800px;
+    }
+
+    .slogan {
+        position: relative;
+
+        text-align: center;
+    }
+
+    .slogan__inner-h1 {
+        margin-bottom: 10px;
+
+        font-size: 27px;
+    }
+
+    .slogan__inner-text {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .nav-bottom__link_active {
+        &::before {
+            width: 35px;
+        }
+    }
+
+    // ========================================================================= about
+    .about-img-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img-list__item {
+        width: 80%;
+
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    // ========================================================================= statistics
+    .statistics__item {
+        flex-basis: calc(100% / 3);
+        padding: 50px 0;
+
+        &:nth-child(3) {
+            border-right: none;
+        }
+
+        span {
+            &:first-child {
+                margin-bottom: 35px;
+
+                font-size: 50px;
+            }
+
+            &:last-child {
+                font-size: 13px;
+            }
+        }
+    }
+
+    // ========================================================================= service
+    .service-list__item {
+        flex-basis: calc(100% / 2);
+
+        &:nth-child(-1n + 4)::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+
+            width: 100%;
+
+            border-bottom: 1px solid $c-grey-4;
+        }
+    }
+
+    // ========================================================================= feauture
+    .feature-list-img__item {
+        &:last-child {
+            left: 51%;
+        }
+    }
+
+    // ========================================================================= quote
+    .quote-list__item_active {
+        flex-direction: column;
+    }
+
+    .quote-list__icon {
+        margin: 0 0 40px 0;
+    }
+
+    .quote-list__text {
+        span:first-child {
+            font-size: 19px;
+            line-height: 29px;
+        }
+    }
+}
+
+// ================
+// ================ 576 ================
+// ================
+@media screen and (max-width: 576px) {
+    // ========================================================================= about
+    .about-img-list__item {
+        width: 100%;
+    }
+
+    // ========================================================================= statistics
+    .statistics__item {
+        flex-basis: 100%;
+        padding: 50px 0;
+
+        border-right: none;
+
+        span {
+            &:first-child {
+                margin-bottom: 35px;
+
+                font-size: 50px;
+            }
+
+            &:last-child {
+                font-size: 13px;
+            }
+        }
+    }
+
+    // ========================================================================= service
+    .service-list__item {
+        flex-basis: 100%;
+
+        &:nth-child(-1n + 5)::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+
+            width: 100%;
+
+            border-bottom: 1px solid $c-grey-4;
+        }
+    }
+
+    // ========================================================================= feauture
+
+    .feature-list-img {
+        padding-right: 0;
+    }
+
+    .feature-list-img__item {
+        &:first-child {
+            width: 80%;
+        }
+
+        &:last-child {
+            right: 0;
+            bottom: -60px;
+            left: none;
+
+            width: 40%;
+        }
+    }
+}
