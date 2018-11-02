@@ -1,5 +1,6 @@
 @media screen and (max-width: 1200px) {
     // ========================================================================= service-2
+
     .service-block {
         flex-direction: column;
         align-items: center;
@@ -19,6 +20,7 @@
 // ================
 // ================ 992 ================
 // ================
+
 @media screen and (max-width: 992px) {
     .header-nav {
         display: none;
@@ -39,11 +41,55 @@
         font-size: 100px;
         line-height: 90px;
     }
+
+    // ========================================================================= about
+
+    .about-img-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img-item {
+        width: 60%;
+        margin: 0 0 30px 0;
+    }
+
+    // ========================================================================= team
+
+    .team-wrap {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .team-img-item {
+        margin: 0 auto 30px;
+    }
+
+    // ========================================================================= work
+
+    .work-img-list__part {
+        width: 100%;
+    }
+
+    .work-img-item {
+        width: 50%;
+        margin: 0;
+    }
+
+    // ========================================================================= clients
+
+    .clients-item {
+        max-width: 100%;
+    }
 }
 
 // ================
 // ================ 768 ================
 // ================
+
 @media screen and (max-width: 768px) {
     .banner {
         height: 800px;
@@ -73,21 +119,13 @@
     }
 
     // ========================================================================= about
-    .about-img-list {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .about-img-list__item {
-        width: 80%;
-
-        &:not(:last-child) {
-            margin-right: 0;
-            margin-bottom: 30px;
-        }
+    .about-img-item {
+        width: 90%;
     }
 
     // ========================================================================= statistics
+
     .statistics__item {
         flex-basis: calc(100% / 3);
         padding: 50px 0;
@@ -110,6 +148,7 @@
     }
 
     // ========================================================================= service
+
     .service-list__item {
         flex-basis: calc(100% / 2);
 
@@ -126,6 +165,7 @@
     }
 
     // ========================================================================= feauture
+
     .feature-list-img__item {
         &:last-child {
             left: 51%;
@@ -133,32 +173,103 @@
     }
 
     // ========================================================================= quote
-    .quote-list__item_active {
+
+    .quote-item_active {
         flex-direction: column;
     }
 
-    .quote-list__icon {
+    .quote-item__icon {
         margin: 0 0 40px 0;
     }
 
-    .quote-list__text {
+    .quote-item__text {
         span:first-child {
             font-size: 19px;
             line-height: 29px;
         }
+    }
+
+    // ========================================================================= logos
+
+    .logos-list {
+        flex-wrap: wrap;
+    }
+
+    .logos-item {
+        width: calc(100% / 3);
+
+        &:nth-child(-n + 3) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // ========================================================================= work
+
+    .work-img-list__part {
+        width: 100%;
+    }
+
+    .work-img-item {
+        width: 100%;
+        margin: 0;
+    }
+
+    .work-img-list__part-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .work-img-item {
+            width: 100%;
+        }
+    }
+
+    // ========================================================================= blog
+
+    .blog-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-item {
+        width: 80%;
+
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 60px;
+        }
+    }
+
+    // ========================================================================= footer
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-mogo {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    .footer-socials {
+        width: 100%;
     }
 }
 
 // ================
 // ================ 576 ================
 // ================
+
 @media screen and (max-width: 576px) {
     // ========================================================================= about
-    .about-img-list__item {
+
+    .about-img-item {
         width: 100%;
     }
 
     // ========================================================================= statistics
+
     .statistics__item {
         flex-basis: 100%;
         padding: 50px 0;
@@ -179,6 +290,7 @@
     }
 
     // ========================================================================= service
+
     .service-list__item {
         flex-basis: 100%;
 
@@ -212,5 +324,17 @@
 
             width: 40%;
         }
+    }
+
+    // ========================================================================= clients
+
+    .clients-item {
+        padding: 0;
+    }
+
+    // ========================================================================= blog
+
+    .blog-item {
+        width: 100%;
     }
 }
