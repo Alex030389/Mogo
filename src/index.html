@@ -24,6 +24,8 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat|Roboto" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=<ваш API-ключ>&load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -592,11 +594,9 @@
 
     <!-- ========================================================================= map -->
 
-    <section class="quote map">
-        <div class="wrapper">
-            <p class="map__text">open map</p>
-            <!-- <div class="map"></div> -->
-        </div>
+    <section class="map">
+        <p class="map__link">open map</p>
+        <div id="map" class="my-map"></div>
     </section>
 
     <!-- ========================================================================= footer -->
@@ -629,6 +629,27 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script>
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [53.90447656, 27.55345404],
+                zoom: 17
+            });
+
+            myPlacemark = new ymaps.Placemark([53.90447656, 27.55345404], {
+                hintContent: 'Текст при наведении на метку',
+                balloonContent: 'Текст при клике на метку!'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+
 
 </body>
 

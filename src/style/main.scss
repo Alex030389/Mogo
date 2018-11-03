@@ -8,7 +8,7 @@
 *::after {
     box-sizing: border-box;
 
-    transition: all .4s;
+    // transition: all .4s;
 }
 
 html {
@@ -1118,7 +1118,14 @@ p {
 // ========================================================================= work
 
 .map {
+    width: 100%;
+    max-width: 1920px;
     position: relative;
+    margin: 0 auto;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    
 
     background: url("../img/bg-map.jpg") no-repeat center center;
     background-size: cover;
@@ -1132,6 +1139,7 @@ p {
         left: 0;
 
         background-color: rgba(255, 255, 255, .85);
+        // z-index: 1;
     }
 
     * {
@@ -1139,9 +1147,9 @@ p {
     }
 }
 
-.map__text {
+.map__link {
     position: relative;
-
+    text-align: center;
     display: block;
     margin: 0 auto;
     padding: 40px 0;
@@ -1158,13 +1166,14 @@ p {
     &::before {
         content: "\e90d";
         position: absolute;
+        font-family: $f-prim;
+
         top: 0;
         left: 50%;
 
         margin-left: -10px;
 
         font-size: 24px;
-        font-family: $f-prim;
     }
 
     &:hover::before {
@@ -1185,6 +1194,7 @@ p {
     }
 }
 
+
 @keyframes map-a {
     0% {
         top: 0;
@@ -1197,6 +1207,16 @@ p {
     100% {
         top: 0;
     }
+}
+
+// iframe {
+//     margin-top: 50px;
+// }
+
+.my-map {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
 }
 
 // ========================================================================= footer
