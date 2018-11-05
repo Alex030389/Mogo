@@ -1,25 +1,15 @@
-%wrap {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-}
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
 
-// %icon-pos {
-//     position: absolute;
-//     top: 0;
-//     left: 25px;
-
-//     width: 40px;
-//     height: 40px;
-// }
-
-
-%reset-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-%h2 {
-    font-family: $f-decor;
+        @if $asset-pipeline == true {
+            src: font-url('#{$file-path}.eot');
+            src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype');
+        } @else {
+            src: url('#{$file-path}.eot');
+            src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+        }
+    }
 }

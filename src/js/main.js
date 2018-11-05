@@ -1,13 +1,13 @@
 "use strict";
-// = ../libs/jquery.min.js
+// = /node_modules/jquery/dist/jquery.min.js
 
-$(function () {
+// $(function () {
   
-  var hamburger = $(".hamburger");
-  var headerNav = $(".header__nav")
-  hamburger.on("click", function (e) {
-    hamburger.toggleClass("is-active");
-    headerNav.toggleClass("header__nav_active");
-  });
+//   var hamburger = $(".hamburger");
+//   var headerNav = $(".header__nav")
+//   hamburger.on("click", function (e) {
+//     hamburger.toggleClass("is-active");
+//     headerNav.toggleClass("header__nav_active");
+//   });
   
-});
+// });

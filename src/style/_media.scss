@@ -1,18 +1,17 @@
 @media screen and (max-width: 1200px) {
-    // ========================================================================= service-2
+    // ============================================================ service-2
 
-    .service-block {
+    .service2 {
         flex-direction: column;
         align-items: center;
     }
 
-    .service-block__img {
+    .service2__img {
         max-width: 570px;
         margin: 0 0 60px;
 
         img {
             width: 100%;
-            height: auto;
         }
     }
 }
@@ -20,47 +19,72 @@
 // ================
 // ================ 992 ================
 // ================
-
 @media screen and (max-width: 992px) {
-    .header-nav {
+
+    // ============================================================ header
+
+    .nav {
         display: none;
     }
 
-    .banner {
-        height: 900px;
-        padding-top: 200px;
+    // ============================================================ banner
+
+    .banner-wrap {
+        height: 800px;
+        padding-top: 144px;
+
+        .banner-slogan_active {
+            &::after {
+                bottom: -0px;
+            }
+        }
     }
 
-    .slogan__inner-h1 {
-        margin-bottom: 20px;
+    .banner-slogan__h1 {
+        font-size: 57px;
+        line-height: 80px;
 
-        font-size: 50px;
+        span {
+            font-size: 120px;
+            line-height: 112px;
+        }
     }
 
-    .slogan__inner-text {
-        font-size: 100px;
-        line-height: 90px;
-    }
+    // ============================================================ about
 
-    // ========================================================================= about
-
-    .about-img-list {
+    .img-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .about-img-item {
+    .img-item {
         width: 60%;
         margin: 0 0 30px 0;
     }
 
-    // ========================================================================= team
+    // ============================================================ service
+    .service-item {
+        flex-basis: calc(100% / 2);
+    
+        &:nth-child(-n + 4)::after {
+            content: "";
+            position: absolute;
+            bottom: -44px;
+            left: 0;
+    
+            width: 100%;
+            height: 1px;
+            background-color: $c-grey-4;
+        }
+    }
+
+    // ============================================================ team
 
     .team-wrap {
         width: 100%;
 
         &:not(:last-child) {
-            margin-bottom: 60px;
+            margin: 0 0 60px 0;
         }
     }
 
@@ -68,7 +92,7 @@
         margin: 0 auto 30px;
     }
 
-    // ========================================================================= work
+    // ============================================================ work
 
     .work-img-list__part {
         width: 100%;
@@ -79,11 +103,12 @@
         margin: 0;
     }
 
-    // ========================================================================= clients
+    // ============================================================ clients
 
     .clients-item {
         max-width: 100%;
     }
+
 }
 
 // ================
@@ -91,42 +116,35 @@
 // ================
 
 @media screen and (max-width: 768px) {
-    .banner {
-        height: 800px;
-    }
 
-    .slogan {
-        position: relative;
+    // ============================================================ banner
 
-        text-align: center;
-    }
+    .banner-slogan__h1 {
+        font-size: 45px;
+        line-height: 64px;
 
-    .slogan__inner-h1 {
-        margin-bottom: 10px;
-
-        font-size: 27px;
-    }
-
-    .slogan__inner-text {
-        font-size: 60px;
-        line-height: 60px;
-    }
-
-    .nav-bottom__link_active {
-        &::before {
-            width: 35px;
+        span {
+            font-size: 96px;
+            line-height: 100px;
         }
     }
 
-    // ========================================================================= about
+    .banner-nav__link_active {
+        &::before {
+            content: "";
+            width: 30px;
+        }
+    }
 
-    .about-img-item {
+    // ============================================================ about
+
+    .img-item {
         width: 90%;
     }
 
-    // ========================================================================= statistics
+    // ============================================================ statistics
 
-    .statistics__item {
+    .statistics {
         flex-basis: calc(100% / 3);
         padding: 50px 0;
 
@@ -147,38 +165,21 @@
         }
     }
 
-    // ========================================================================= service
+    // ============================================================ feauture
 
-    .service-list__item {
-        flex-basis: calc(100% / 2);
-
-        &:nth-child(-1n + 4)::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-
-            width: 100%;
-
-            border-bottom: 1px solid $c-grey-4;
-        }
-    }
-
-    // ========================================================================= feauture
-
-    .feature-list-img__item {
+    .feature__item {
         &:last-child {
             left: 51%;
         }
     }
 
-    // ========================================================================= quote
+    // ============================================================ quote
 
     .quote-item_active {
         flex-direction: column;
     }
 
-    .quote-item__icon {
+    .quote-item__img {
         margin: 0 0 40px 0;
     }
 
@@ -189,7 +190,7 @@
         }
     }
 
-    // ========================================================================= logos
+    // ============================================================ logos
 
     .logos-list {
         flex-wrap: wrap;
@@ -203,7 +204,7 @@
         }
     }
 
-    // ========================================================================= work
+    // ============================================================ work
 
     .work-img-list__part {
         width: 100%;
@@ -224,7 +225,7 @@
         }
     }
 
-    // ========================================================================= blog
+    // ============================================================ blog
 
     .blog-list {
         display: flex;
@@ -241,7 +242,7 @@
         }
     }
 
-    // ========================================================================= footer
+    // ============================================================ footer
 
     .footer-content {
         flex-direction: column;
@@ -262,19 +263,54 @@
 // ================
 
 @media screen and (max-width: 576px) {
-    // ========================================================================= about
 
-    .about-img-item {
+    // ============================================================ banner
+
+    .banner-wrap {
+        height: 600px;
+    }
+
+    .btn {
+        padding: 8px 24px;
+    }
+
+    .banner-slogan__h1 {
+        font-size: 31px;
+        line-height: 45px;
+
+        span {
+            font-size: 55px;
+            line-height: 60px;
+        }
+    }
+
+    .banner-nav {
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    // ============================================================ about
+
+    .img-item {
         width: 100%;
     }
 
-    // ========================================================================= statistics
+    // ============================================================ statistics
 
-    .statistics__item {
+    .statistics {
         flex-basis: 100%;
-        padding: 50px 0;
+        padding: 30px 0;
 
         border-right: none;
+        &:first-child {
+            padding-top: 50px;
+        }
+        &:last-child {
+            padding-bottom: 50px;
+        }
 
         span {
             &:first-child {
@@ -289,30 +325,30 @@
         }
     }
 
-    // ========================================================================= service
+    // ============================================================ service
 
-    .service-list__item {
+    .service-item {
         flex-basis: 100%;
-
-        &:nth-child(-1n + 5)::after {
+    
+        &:nth-child(-n + 5)::after {
             content: "";
             position: absolute;
-            bottom: -50px;
+            bottom: -44px;
             left: 0;
-
+    
             width: 100%;
-
-            border-bottom: 1px solid $c-grey-4;
+            height: 1px;
+            background-color: $c-grey-4;
         }
     }
 
-    // ========================================================================= feauture
+    // ============================================================ feauture
 
-    .feature-list-img {
+    .feature-list {
         padding-right: 0;
     }
 
-    .feature-list-img__item {
+    .feature__item {
         &:first-child {
             width: 80%;
         }
@@ -326,13 +362,13 @@
         }
     }
 
-    // ========================================================================= clients
+    // ============================================================ clients
 
     .clients-item {
         padding: 0;
     }
 
-    // ========================================================================= blog
+    // ============================================================ blog
 
     .blog-item {
         width: 100%;

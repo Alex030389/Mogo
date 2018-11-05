@@ -20,6 +20,7 @@ var path = {
         js: 'dist/js/',
         css: 'dist/css/',
         img: 'dist/img/',
+        imgAll: 'dist/img/all',
         fonts: 'dist/fonts/'
     },
     src: {
