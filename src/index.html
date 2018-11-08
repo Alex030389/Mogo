@@ -1,81 +1,100 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
 
 <head>
 
     <meta charset="utf-8">
-    <!-- <base href="/"> -->
 
     <title>MoGo</title>
-    <meta name="description" content="">
+    <meta name="description" content="sait mogo">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Template Basic Images -->
-    <meta property="og:image" content="path/to/image.jpg">
     <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 
-    <!-- Custom Browsers Color -->
-    <meta name="theme-color" content="#000">
-
-    <!-- <style>body {opacity: 0; overflow: hidden;} html {background-color: #fff}</style> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat|Roboto" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=<ваш API-ключ>&load=package.standard&lang=ru-RU" type="text/javascript"></script>
-
+    <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=<873ba24f-8918-4930-bdab-78c5bf0d40b1>&load=package.standard&lang=ru-RU" type="text/javascript"></script>
 </head>
 
 <body>
+
+    <!-- ========================================================================= preloader -->
+
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__first"></div>
+            <div class="preloader__second"></div>
+            <div class="preloader__third"></div>
+        </div>
+    </div>
+
     <!-- ========================================================================= header -->
 
     <header class="header">
         <div class="logo">MoGo</div>
-        <ul class="nav">
-            <li><a class="nav__link nav__link_active" href="#">about</a></li>
-            <li><a class="nav__link" href="#">service</a></li>
-            <li><a class="nav__link" href="#">work</a></li>
-            <li><a class="nav__link" href="#">blog</a></li>
-            <li><a class="nav__link" href="#">contact</a></li>
-        </ul>
+        <nav class="nav">
+            <ul class="menu trans" id="menu">
+                <li><a class="menu__link menu__link_active" href="#about">about</a></li>
+                <li><a class="menu__link" href="#service">service</a></li>
+                <li><a class="menu__link" href="#work">work</a></li>
+                <li><a class="menu__link" href="#blog">blog</a></li>
+                <li><a class="menu__link" href="#contact">contact</a></li>
+            </ul>
+            <div class="hamburger hamburger--arrowalt">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- ========================================================================= banner -->
 
-    <section class="wrap banner-wrap">
+    <section class="wrap banner-wrap trans">
         <div class="inner banner-inner">
             <div class="banner-slogan banner-slogan_active">
-                <h1 class="banner-slogan__h1">Creative Template <span>Welcome</span> <span>to MoGo</span></h1>
-            </div>
-            <div class="banner-slogan">
                 <h1 class="banner-slogan__h1">
                     Creative Template
                     <span>Welcome</span>
-                    <span>to MoGo</span>
+                    <span>to MoGo</span></h1>
+            </div>
+            <div class="banner-slogan">
+                <h1 class="banner-slogan__h1">
+                    Two Content
+                    <span>work</span>
+                    <span>lorem</span>
                 </h1>
             </div>
             <div class="banner-slogan">
                 <h1 class="banner-slogan__h1">
-                    Creative Template
-                    <span>Welcome</span>
-                    <span>to MoGo</span>
+                    Three Content
+                    <span>about</span>
+                    <span>lorem</span>
                 </h1>
             </div>
-            <a class="btn" href="#">learn more</a>
-            <ul class="banner-nav">
-                <li><a href="#" class="banner-nav__link banner-nav__link_active">01 Intro</a></li>
-                <li><a href="#" class="banner-nav__link">02 Work</a></li>
-                <li><a href="#" class="banner-nav__link">03 About</a></li>
-                <li><a href="#" class="banner-nav__link">04 Contacts</a></li>
+            <div class="banner-slogan">
+                <h1 class="banner-slogan__h1">
+                    Four Content
+                    <span>contacts</span>
+                    <span>lorem</span>
+                </h1>
+            </div>
+            <a class="btn" href="#about">learn more</a>
+            <ul class="banner-tab">
+                    <li class="banner-tab__link banner-tab__link_active">01 Intro</li>
+                    <li class="banner-tab__link">02 Work</li>
+                    <li class="banner-tab__link">03 About</li>
+                    <li class="banner-tab__link">04 Contacts</li>
             </ul>
         </div>
     </section>
 
     <!-- ========================================================================= about -->
 
-    <section class="wrap">
+    <section class="wrap trans" id="about">
         <div class="inner">
             <div class="caption">
                 <h2 class="caption__title">What we do <span>Story about us</span></h2>
@@ -86,17 +105,17 @@
             <div class="img-list">
                 <figure class="img-item">
                     <img class="img-item__foto" src="./img/about/comp.png" alt="img">
-                    <span class="img-item__icon">&#xe90f</span>
+                    <span class="img-item__icon">&#xe90f;</span>
                     <figcaption class="img-item__text">Lorem ipsum 1</figcaption>
                 </figure>
                 <figure class="img-item">
                     <img class="img-item__foto" src="./img/about/phone.png" alt="img">
-                    <span class="img-item__icon">&#xe90c</span>
+                    <span class="img-item__icon">&#xe90c;</span>
                     <figcaption class="img-item__text">Lorem ipsum 2</figcaption>
                 </figure>
                 <figure class="img-item img-item_margin-r-0">
                     <img class="img-item__foto" src="./img/about/flower.png" alt="img">
-                    <span class="img-item__icon">&#xe910</span>
+                    <span class="img-item__icon">&#xe910;</span>
                     <figcaption class="img-item__text">Lorem ipsum 3</figcaption>
                 </figure>
             </div>
@@ -130,54 +149,54 @@
         </div>
     </section>
 
-    <!-- ========================================================================= service <= about -->
+    <!-- ========================================================================= service < about -->
 
-    <section class="wrap">
+    <section class="wrap" id="service">
         <div class="inner">
             <div class="caption">
-                <h2 class="caption__title">What we do <span>Story about us</span></h2>
+                <h2 class="caption__title">We work with <span>Amazing Services</span></h2>
             </div>
-            <div class="service-list">
+            <div class="service-list trans">
                 <div class="service-item">
-                    <span class="service-item__icon">&#xe90f</span>
+                    <span class="service-item__icon">&#xe90f;</span>
                     <h3>Photography</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
                 <div class="service-item">
-                    <span class="service-item__icon">&#xe908</span>
+                    <span class="service-item__icon">&#xe908;</span>
                     <h3>Web Design</h3>
-                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
                 <div class="service-item">
-                    <span class="service-item__icon">&#xe903</span>
+                    <span class="service-item__icon">&#xe903;</span>
                     <h3>Creativity</h3>
-                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
                 <div class="service-item">
-                    <span class="service-item__icon">&#xe901</span>
+                    <span class="service-item__icon">&#xe901;</span>
                     <h3>seo</h3>
-                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
                 <div class="service-item">
-                    <span class="service-item__icon">&#xe909</span>
+                    <span class="service-item__icon">&#xe909;</span>
                     <h3>Css/Html</h3>
-                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
                 <div class="service-item">
-                    <span class="service-item__icon">&#xe90a</span>
+                    <span class="service-item__icon">&#xe90a;</span>
                     <h3>digital</h3>
-                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ======================================================================= feauture <- about -->
+    <!-- ======================================================================= feauture < about -->
 
     <section class="wrap wrap_bg feauture-wrap">
         <div class="inner">
             <div class="caption">
-                <h2 class="caption__title">What we do <span>Story about us</span></h2>
+                <h2 class="caption__title">For all devices <span>Unique design</span></h2>
             </div>
             <div class="feature-list">
                 <img class="feature__item" src="./img/feauture/tablet.png" alt="tablet">
@@ -186,21 +205,21 @@
         </div>
     </section>
 
-    <!-- ======================================================================= service-2 <-about -->
+    <!-- ======================================================================= service2 < about -->
 
     <section class="wrap">
         <div class="inner">
             <div class="caption">
-                <h2 class="caption__title">What we do <span>Story about us</span></h2>
+                <h2 class="caption__title">Service <span>what we do</span></h2>
                 <p class="caption__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
             <div class="service2">
                 <div class="service2__img"><img src="./img/service-img.jpg" alt="service"></div>
-                <div class="service2-list">
+                <div class="service2-list trans">
                     <div class="service2-item service2-item_active">
-                        <span class="service2-item__icon">&#xe90c</span>
+                        <span class="service2-item__icon">&#xe90c;</span>
                         <h3 class="service2-item__title">Photography</h3>
                         <p class="service2-item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Facilis, hic sapiente! Ratione numquam voluptatibus autem animi velit voluptates quas
@@ -214,7 +233,7 @@
                             quidem!</p>
                     </div>
                     <div class="service2-item">
-                        <span class="service2-item__icon">&#xe905</span>
+                        <span class="service2-item__icon">&#xe905;</span>
                         <h3 class="service2-item__title">Creativity</h3>
                         <p class="service2-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci exercitationem maiores nesciunt saepe enim dolorum, ratione quae placeat iste quod
@@ -228,7 +247,7 @@
                             labore.</p>
                     </div>
                     <div class="service2-item">
-                        <span class="service2-item__icon">&#xe902</span>
+                        <span class="service2-item__icon">&#xe902;</span>
                         <h3 class="service2-item__title">Web design</h3>
                         <p class="service2-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
                             explicabo sit amet quia unde omnis consequatur, animi, rerum a fugit, enim ab magni cum id.
@@ -242,16 +261,17 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- ========================================================================= quote -->
 
-    <section class="wrap quote-wrap">
+    <section class="wrap quote-wrap trans">
         <div class="inner quote-inner">
             <div class="control control_left"></div>
             <div class="quote-list">
                 <div class="quote-item quote-item_active">
-                    <div class="quote-item__img"><span>&#xe90f</span></div>
+                    <div class="quote-item__img"><span>&#xe90f;</span></div>
                     <div class="quote-item__text">
                         <span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -260,7 +280,7 @@
                     </div>
                 </div>
                 <div class="quote-item">
-                    <div class="quote-item__img"><span class="quote-item__img-icon">&#xe90f</span></div>
+                    <div class="quote-item__img"><span class="quote-item__img-icon">&#xe90f;</span></div>
                     <div class="quote-item__text">
                         <span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -269,7 +289,7 @@
                     </div>
                 </div>
                 <div class="quote-item">
-                    <div class="quote-item__img"><span class="quote-item__img-icon">&#xe90f</span></div>
+                    <div class="quote-item__img"><span class="quote-item__img-icon">&#xe90f;</span></div>
                     <div class="quote-item__text">
                         <span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -287,20 +307,20 @@
     <section class="wrap">
         <div class="inner">
             <div class="caption">
-                <h2 class="caption__title">What we do <span>Story about us</span></h2>
+                <h2 class="caption__title">Who we are <span>Meet our team</span></h2>
                 <p class="caption__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod
                     temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="img-list">
+            <div class="img-list trans">
                 <div class="team-wrap">
                     <figure class="img-item team-img-item">
                         <img class="img-item__foto" src="./img/team/design.jpg" alt="img">
                         <ul class="team-img-item__socials">
-                            <li><a class="team-img-item__socials-link" href="#">&#xe906</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe912</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe90e</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe90b</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe906;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe912;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe90e;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe90b;</a></li>
                         </ul>
                     </figure>
                     <div class="team-img-item__text">
@@ -312,10 +332,10 @@
                     <figure class="img-item team-img-item">
                         <img class="img-item__foto" src="./img/team/ux-design.jpg" alt="img">
                         <ul class="team-img-item__socials">
-                            <li><a class="team-img-item__socials-link" href="#">&#xe906</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe912</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe90e</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe90b</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe906;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe912;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe90e;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe90b;</a></li>
                         </ul>
                     </figure>
                     <div class="team-img-item__text">
@@ -327,10 +347,10 @@
                     <figure class="img-item team-img-item">
                         <img class="img-item__foto" src="./img/team/developer.jpg" alt="img">
                         <ul class="team-img-item__socials">
-                            <li><a class="team-img-item__socials-link" href="#">&#xe906</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe912</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe90e</a></li>
-                            <li><a class="team-img-item__socials-link" href="#">&#xe90b</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe906;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe912;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe90e;</a></li>
+                            <li><a class="team-img-item__socials-link" href="#">&#xe90b;</a></li>
                         </ul>
                     </figure>
                     <div class="team-img-item__text">
@@ -342,7 +362,7 @@
         </div>
     </section>
 
-    <!-- ========================================================================= logos-qoute -->
+    <!-- ========================================================================= logos < qoute -->
 
     <section class="wrap logos-wrap">
         <div class="inner logos-list">
@@ -357,33 +377,33 @@
 
     <!-- ========================================================================= work -->
 
-    <section class="wrap work-wrap">
+    <section class="wrap work-wrap" id="work">
         <div class="caption">
-            <h2 class="caption__title">What we do <span>Story about us</span></h2>
+            <h2 class="caption__title">What we do <span>some of our work</span></h2>
             <p class="caption__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod
                 temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div class="img-list work-img-list">
+        <div class="img-list work-img-list trans">
             <div class="work-img-list__part">
                 <figure class="img-item work-img-item">
                     <img class="img-item__foto work-img-item__foto" src="./img/work/1-1.jpg" alt="img">
-                    <span class="img-item__icon">&#xe90f</span>
+                    <span class="img-item__icon">&#xe90f;</span>
                     <figcaption class="img-item__text">Lorem ipsum 1</figcaption>
                 </figure>
                 <figure class="img-item work-img-item">
                     <img class="img-item__foto work-img-item__foto" src="./img/work/1-2.jpg" alt="img">
-                    <span class="img-item__icon">&#xe90c</span>
+                    <span class="img-item__icon">&#xe90c;</span>
                     <figcaption class="img-item__text">Lorem ipsum 2</figcaption>
                 </figure>
                 <figure class="img-item work-img-item">
                     <img class="img-item__foto work-img-item__foto" src="./img/work/1-3.jpg" alt="img">
-                    <span class="img-item__icon">&#xe910</span>
+                    <span class="img-item__icon">&#xe910;</span>
                     <figcaption class="img-item__text">Lorem ipsum 3</figcaption>
                 </figure>
                 <figure class="img-item work-img-item">
                     <img class="img-item__foto work-img-item__foto" src="./img/work/1-4.jpg" alt="img">
-                    <span class="img-item__icon">&#xe910</span>
+                    <span class="img-item__icon">&#xe910;</span>
                     <figcaption class="img-item__text">Lorem ipsum 3</figcaption>
                 </figure>
             </div>
@@ -391,19 +411,19 @@
                 <div class="work-img-list__part-2">
                     <figure class="img-item work-img-item">
                         <img class="img-item__foto work-img-item__foto" src="./img/work/2-1.jpg" alt="img">
-                        <span class="img-item__icon">&#xe90f</span>
+                        <span class="img-item__icon">&#xe90f;</span>
                         <figcaption class="img-item__text">Lorem ipsum 1</figcaption>
                     </figure>
                 </div>
                 <div class="work-img-list__part-2">
                     <figure class="img-item work-img-item">
                         <img class="img-item__foto work-img-item__foto" src="./img/work/2-2.jpg" alt="img">
-                        <span class="img-item__icon">&#xe90c</span>
+                        <span class="img-item__icon">&#xe90c;</span>
                         <figcaption class="img-item__text">Lorem ipsum 2</figcaption>
                     </figure>
                     <figure class="img-item work-img-item">
                         <img class="img-item__foto work-img-item__foto" src="./img/work/2-3.jpg" alt="img">
-                        <span class="img-item__icon">&#xe910</span>
+                        <span class="img-item__icon">&#xe910;</span>
                         <figcaption class="img-item__text">Lorem ipsum 3</figcaption>
                     </figure>
                 </div>
@@ -411,15 +431,15 @@
         </div>
     </section>
 
-    <!-- ========================================================================= testimonial <= quote -->
+    <!-- ========================================================================= testimonial < quote -->
 
-    <section class="wrap">
+    <section class="wrap trans">
         <div class="inner quote-inner">
             <div class="control control_left"></div>
             <div class="quote-list">
                 <div class="quote-item quote-item_active">
                     <div class="quote-item__img testimonial-quote-item__img">
-                        <img src="./img/testimonial/ааа.jpg">
+                        <img src="./img/testimonial/ааа.jpg" alt="aaa">
                     </div>
                     <div class="quote-item__text">
                         <span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -433,12 +453,12 @@
         </div>
     </section>
 
-    <!-- ========================================================================= clients-about -->
+    <!-- ========================================================================= clients < about -->
 
     <section class="wrap wrap_bg clients-wrap">
         <div class="inner">
             <div class="caption">
-                <h2 class="caption__title">What we do <span>Story about us</span></h2>
+                <h2 class="caption__title">Happy Clients <span>What people say</span></h2>
             </div>
             <div class="clients-list">
                 <div class="clients-item">
@@ -454,20 +474,20 @@
                     <div class="clients-item__avatar"><img src="./img/clients/Karvounis.jpg" alt="ava"></div>
                     <div class="clients-item__text">
                         <h3 class="clients-item__name">Matthew Dix</h3>
-                        <p class="clients-item__work">Graphic Design</h4>
-                            <p class="clients-item__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                        <p class="clients-item__work">Graphic Design</p>
+                        <p class="clients-item__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                     </div>
                 </div>
                 <div class="clients-item">
-                    <div class="clients-item__avatar"><img src="./img/clients/Castillo .jpg" alt="ava"></div>
+                    <div class="clients-item__avatar"><img src="./img/clients/Castillo.jpg" alt="ava"></div>
                     <div class="clients-item__text">
                         <h3 class="clients-item__name">Matthew Dix</h3>
-                        <p class="clients-item__work">Graphic Design</h4>
-                            <p class="clients-item__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                        <p class="clients-item__work">Graphic Design</p>
+                        <p class="clients-item__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                     </div>
                 </div>
                 <div class="clients-item">
@@ -483,14 +503,14 @@
         </div>
     </section>
 
-    <!-- ========================================================================= blog-about -->
+    <!-- ========================================================================= blog < about -->
 
-    <section class="wrap">
+    <section class="wrap" id="blog">
         <div class="inner">
             <div class="caption">
-                <h2 class="caption__title">What we do <span>Story about us</span></h2>
+                <h2 class="caption__title">Our stories <span>Latest blog</span></h2>
             </div>
-            <div class="blog-list">
+            <div class="blog-list trans">
                 <div class="blog-item">
                     <div class="blog-item__img">
                         <img src="./img/blog/post-1.jpg" alt="post">
@@ -553,12 +573,14 @@
 
     <section class="wrap wrap_bg map-wrap">
         <p class="map__link">open map</p>
-        <div id="map" class="map map_active"></div>
+        <div class="map__box">
+            <div id="map" class="map"></div>
+        </div>
     </section>
 
     <!-- ========================================================================= footer -->
 
-    <footer class="wrap footer-wrap">
+    <footer class="wrap footer-wrap" id="contact">
         <div class="inner">
             <div class="footer-content">
                 <div class="footer-mogo">
@@ -570,14 +592,14 @@
                 <div class="footer-socials">
                     <p class="footer-socials__followers"><span>15k</span> followers</p>
                     <p class="footer-socials__list">Follow Us:
-                        <a class="footer-socials__link" href="#">&#xe906</a>
-                        <a class="footer-socials__link" href="#">&#xe912</a>
-                        <a class="footer-socials__link" href="#">&#xe90b</a>
-                        <a class="footer-socials__link" href="#">&#xe90e</a>
-                        <a class="footer-socials__link" href="#">&#xe907</a>
-                        <a class="footer-socials__link" href="#">&#xe914</a>
-                        <a class="footer-socials__link" href="#">&#xe904</a>
-                        <a class="footer-socials__link" href="#">&#xe911</a>
+                        <a class="footer-socials__link" href="#">&#xe906;</a>
+                        <a class="footer-socials__link" href="#">&#xe912;</a>
+                        <a class="footer-socials__link" href="#">&#xe90b;</a>
+                        <a class="footer-socials__link" href="#">&#xe90e;</a>
+                        <a class="footer-socials__link" href="#">&#xe907;</a>
+                        <a class="footer-socials__link" href="#">&#xe914;</a>
+                        <a class="footer-socials__link" href="#">&#xe904;</a>
+                        <a class="footer-socials__link" href="#">&#xe911;</a>
                     </p>
                 </div>
             </div>
@@ -585,9 +607,13 @@
         </div>
     </footer>
 
-    <!-- ======================================================================= script -->
+    <div class="up">
+        <span>up</span>
+    </div>
 
-    <script src="js/main.js"></script>
+    <!-- ======================================================================= scripts -->
+
+    <script src="./js/main.min.js"></script>
 
     <script>
         ymaps.ready(init);

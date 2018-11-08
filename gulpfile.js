@@ -1,12 +1,12 @@
-'use strict';
+// 'use strict';
 
 var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     prefixer    = require('gulp-autoprefixer'),
+    concat        = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
     sass        = require('gulp-sass'),
     sourcemaps  = require('gulp-sourcemaps'),
-    rigger      = require('gulp-rigger'),
     cssmin      = require('gulp-clean-css'),
     plumber     = require('gulp-plumber'),
 	notify      = require('gulp-notify'),
@@ -25,7 +25,11 @@ var path = {
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/main.js',
+        js: [
+            'node_modules/jquery/dist/jquery.min.js',
+            'src/js/jquery.flexslider-min.js',
+            'src/js/main.js'
+        ],
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -60,15 +64,14 @@ gulp.task('clean', function () {
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
-        // .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
-        .pipe(rigger())
-        .pipe(sourcemaps.init()) 
+        .pipe(sourcemaps.init())
+        .pipe(concat('main.min.js'))
         .pipe(uglify()) 
         .pipe(sourcemaps.write()) 
         .pipe(gulp.dest(path.build.js))
@@ -142,7 +145,7 @@ gulp.task('default', ['build', 'webserver', 'watch']);
 // gulp
 // gulp-autoprefixer
 // gulp-clean-css
-// gulp-rigger (конкат html или js файлов)
+// gulp-concat
 // gulp-sass
 // gulp-sourcemaps
 // gulp-uglify
