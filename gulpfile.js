@@ -26,9 +26,9 @@ var path = {
     src: {
         html: 'src/*.html',
         js: [
-            'node_modules/jquery/dist/jquery.min.js',
-            'src/js/jquery.flexslider-min.js',
-            'src/js/main.js'
+            './node_modules/jquery/dist/jquery.min.js',
+            "./node_modules/slick-carousel/slick/slick.min.js",
+            './src/js/main.js'
         ],
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',

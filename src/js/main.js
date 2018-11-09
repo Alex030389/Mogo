@@ -8,7 +8,7 @@ $(document).ready(function () {
         setInterval(function () {
             p.remove();
         }, 1000);
-    }, 3000);
+    }, 1000);
 
     // scroll
     $("#menu").on("click", "a", function (event) {
@@ -27,10 +27,10 @@ $(document).ready(function () {
         hamburger.toggleClass("is-active");
         // $(".menu").fadeToggle();
         $(".menu").toggleClass("menu_active");
-        
+
         // disable scrolling when the menu is active
         if (hamburger.hasClass("is-active")) {
-            
+
             var winScrollTop = $(window).scrollTop();
             $(window).bind("scroll", function () {
                 $(window).scrollTop(winScrollTop);
@@ -39,8 +39,8 @@ $(document).ready(function () {
             $(window).off("scroll");
         }
     })
-    
-    $(".menu__link").click(function() {
+
+    $(".menu__link").click(function () {
         $(window).off("scroll");
         hamburger.toggleClass("is-active");
         $(".menu").toggleClass("menu_active");
@@ -62,9 +62,6 @@ $(document).ready(function () {
         });
     });
 
-    
-
-
     // scroll top
     $(document).scroll(function () {
         if ($(window).scrollTop() >= 3000) {
@@ -79,6 +76,14 @@ $(document).ready(function () {
         }, 600);
     });
 
+    // slick slaider
+    $('.quote-list').slick({
+        infinite: true,
+        fade: true,
+        prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
+        nextArrow: "<button type='button' class='slick-next pull-right'></button>"
+    });
+
     // map
     var map = $(".map__link");
     map.click(function () {
@@ -89,6 +94,4 @@ $(document).ready(function () {
         }
         $(".map__box").slideToggle("600");
     });
-
-
 })
