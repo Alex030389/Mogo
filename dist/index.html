@@ -14,7 +14,9 @@
     <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./libs/normalize/normalize.css">
+    <link rel="stylesheet" href="./libs/slick/slick.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 
     <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=<873ba24f-8918-4930-bdab-78c5bf0d40b1>&load=package.standard&lang=ru-RU" type="text/javascript"></script>
 </head>
@@ -628,8 +630,9 @@
 
     <!-- ======================================================================= scripts -->
 
-    <script src="./js/main.min.js"></script>
-
+    <script src="./libs/jquery/jquery.min.js"></script>
+    <script src="./libs/slick/slick.min.js"></script>
+    <script src="./js/scripts.min.js"></script>
     <script>
         ymaps.ready(init);
         var myMap,
